@@ -4,8 +4,10 @@ const path = require('path');
 const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 const router = express.Router();
+
+app.use(cors())
 
 app.use(express.static(path.join(__dirname, '../static')));
 
